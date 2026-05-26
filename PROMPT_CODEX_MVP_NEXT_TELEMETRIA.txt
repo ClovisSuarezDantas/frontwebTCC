@@ -1,0 +1,22 @@
+Implemente um MVP de front-end web em Next.js seguindo exatamente o arquivo AGENTS.md.
+
+Requisitos principais:
+- Use Next.js com App Router, TypeScript e Tailwind CSS.
+- Não use Vite.
+- Crie uma única página principal em /.
+- O MVP deve iniciar em modo mock, funcionando sem ESP32 conectado.
+- Mostre cards de telemetria: velocidade, RPM, GPS, estado do veículo, registros locais e sincronização.
+- Adicione configuração da URL base do ESP32, salva em localStorage.
+- Adicione alternância entre Modo Mock e Modo ESP32 Real.
+- Implemente busca de status, telemetria e logs via HTTP.
+- Implemente botões para iniciar monitoramento, parar monitoramento, sincronizar dados, limpar logs e atualizar agora.
+- Trate erros de conexão de forma amigável.
+- Crie os arquivos sugeridos no AGENTS.md.
+- Crie ou atualize o README.md com instruções de instalação, execução, modo mock, modo real e endpoints esperados no firmware.
+
+Ao final, garanta que o projeto rode com:
+
+npm install
+npm run dev
+
+Mantenha o código simples, limpo e focado em teste de hardware/software. Não implemente autenticação, banco de dados, WebSocket, Web Serial, mapas ou gráficos históricos neste MVP.
