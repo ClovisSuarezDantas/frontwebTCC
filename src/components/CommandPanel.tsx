@@ -23,7 +23,7 @@ const commandButtons: Array<{
     className: "bg-rose-600 hover:bg-rose-700"
   },
   {
-    label: "Sincronizar dados",
+    label: "Verificar sincronizacao",
     command: "sync",
     className: "bg-sky-600 hover:bg-sky-700"
   },
@@ -47,7 +47,7 @@ export function CommandPanel({
       <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 className="text-lg font-semibold text-slate-950">Comandos</h2>
-          <p className="text-sm text-slate-600">Ações básicas para teste do firmware.</p>
+          <p className="text-sm text-slate-600">Acoes basicas integradas ao backend e firmware.</p>
         </div>
       </div>
 

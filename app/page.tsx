@@ -32,7 +32,9 @@ export default function Home() {
           <h1 className="text-3xl font-semibold tracking-normal text-slate-950">
             MVP Telemetria Veicular
           </h1>
-          <p className="text-base text-slate-600">Painel de teste para ESP32, OBD-II e GPS</p>
+          <p className="text-base text-slate-600">
+            Painel integrado ao backend NestJS, ESP32, OBD-II e GPS
+          </p>
         </header>
 
         <ConfigPanel

@@ -30,7 +30,7 @@ function formatUptime(seconds: number) {
 
 function formatLastUpdated(value: string | null) {
   if (!value) {
-    return "Ainda não atualizado";
+    return "Ainda nao atualizado";
   }
 
   return new Intl.DateTimeFormat("pt-BR", {
@@ -58,7 +58,7 @@ export function StatusBar({
               {status.connected ? "Conectado" : "Desconectado"}
             </span>
             <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-700">
-              {mode === "mock" ? "Modo Mock" : "Modo ESP32 Real"}
+              {mode === "mock" ? "Modo Mock" : "Backend NestJS"}
             </span>
             {isLoading ? (
               <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">
@@ -68,12 +68,12 @@ export function StatusBar({
           </div>
           <h2 className="mt-3 text-lg font-semibold text-slate-950">{status.deviceName}</h2>
           <p className="text-sm text-slate-600">
-            Firmware {status.firmwareVersion} | Uptime {formatUptime(status.uptime)}
+            Origem {status.firmwareVersion} | Uptime {formatUptime(status.uptime)}
           </p>
         </div>
 
         <div className="text-sm text-slate-600 lg:text-right">
-          <div>Última atualização</div>
+          <div>Ultima atualizacao</div>
           <div className="font-semibold text-slate-900">{formatLastUpdated(lastUpdated)}</div>
         </div>
       </div>

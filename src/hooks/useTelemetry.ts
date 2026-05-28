@@ -26,7 +26,7 @@ import type {
 
 const offlineStatus: DeviceStatus = {
   connected: false,
-  deviceName: "ESP32 indisponível",
+  deviceName: "Backend indisponivel",
   firmwareVersion: "-",
   uptime: 0
 };
@@ -119,7 +119,7 @@ export function useTelemetry() {
       setStatus(getMockStatus());
       setError(null);
       setLogs((current) => [
-        createLocalLog("info", "Teste de conexão mock aprovado."),
+        createLocalLog("info", "Teste de conexao mock aprovado."),
         ...current
       ].slice(0, 30));
       return;
@@ -132,7 +132,7 @@ export function useTelemetry() {
       setStatus(result.data);
       setError(null);
       setLogs((current) => [
-        createLocalLog("info", "Conexão com ESP32 testada com sucesso."),
+        createLocalLog("info", "Conexao com backend testada com sucesso."),
         ...current
       ].slice(0, 30));
     } else {
@@ -165,7 +165,7 @@ export function useTelemetry() {
       if (result.ok) {
         setError(null);
         setLogs((current) => [
-          createLocalLog("info", result.data?.message || "Comando enviado ao ESP32 com sucesso."),
+          createLocalLog("info", result.data?.message || "Comando executado no backend."),
           ...current
         ].slice(0, 30));
         await refresh();

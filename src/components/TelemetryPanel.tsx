@@ -13,7 +13,7 @@ type TelemetryPanelProps = {
 const gpsLabels: Record<GpsStatus, string> = {
   ok: "OK",
   sem_sinal: "Sem sinal",
-  indisponivel: "Indisponível"
+  indisponivel: "Indisponivel"
 };
 
 const vehicleLabels: Record<VehicleStatus, string> = {
@@ -92,7 +92,7 @@ export function TelemetryPanel({ telemetry }: TelemetryPanelProps) {
             Telemetria atual
           </h2>
           <p className="text-sm text-slate-600">
-            Última leitura: {formatTimestamp(telemetry?.timestamp)}
+            Ultima leitura: {formatTimestamp(telemetry?.timestamp)}
           </p>
         </div>
       </div>
@@ -109,7 +109,7 @@ export function TelemetryPanel({ telemetry }: TelemetryPanelProps) {
           title="RPM"
           value={telemetry ? String(telemetry.rpm) : "--"}
           unit="rpm"
-          description="Rotação atual do motor."
+          description="Rotacao atual do motor."
           tone="neutral"
         />
         <TelemetryCard
@@ -119,21 +119,21 @@ export function TelemetryPanel({ telemetry }: TelemetryPanelProps) {
           tone={getGpsTone(telemetry?.gpsStatus)}
         />
         <TelemetryCard
-          title="Estado do veículo"
+          title="Estado do veiculo"
           value={telemetry ? vehicleLabels[telemetry.vehicleStatus] : "--"}
-          description="Estado operacional recebido do firmware."
+          description="Estado operacional inferido pela ultima telemetria."
           tone={getVehicleTone(telemetry?.vehicleStatus)}
         />
         <TelemetryCard
-          title="Registros locais"
+          title="Registros no backend"
           value={telemetry ? String(telemetry.storedRecords) : "--"}
-          description="Leituras armazenadas localmente no dispositivo."
+          description="Leituras armazenadas no PostgreSQL."
           tone="neutral"
         />
         <TelemetryCard
-          title="Sincronização"
+          title="Sincronizacao"
           value={telemetry ? syncLabels[telemetry.syncStatus] : "--"}
-          description="Situação dos dados em relação ao envio."
+          description="Situacao dos dados em relacao ao envio."
           tone={getSyncTone(telemetry?.syncStatus)}
         />
       </div>
